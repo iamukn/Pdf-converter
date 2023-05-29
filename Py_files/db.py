@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, Integer
 from sqlalchemy.orm import sessionmaker, declarative_base
 import json
 
-""" Creates and engine, a session and also login to the \
+""" Creates and engine, a Session and also login to the \
         count table in mysql database """
 
 
@@ -53,7 +53,7 @@ def visitCount(x="visits"):
 
         for i in data:
             if x == "visits":
-                i.site_visit *= 0
+                i.site_visit += 1
                 session.commit()
                 return
 
@@ -76,9 +76,10 @@ def counts():
         """iterate through to increment the file convert data from the table"""
 
         for i in data:
-            return json.dumps({
+            res = {
                 'Site_traffic': i.site_visit,
                 'Total_converts': i.file_converts
-                })
+                }
+            return res
     except Exception:
         return "An increment error occured"
