@@ -1,0 +1,421 @@
+
+/* For laptop screens, 320px is okay for the padding left of quotes and author */
+
+
+* {
+
+    background-color:  none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+display : flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-end;
+font-family: arial;
+font-size: 1.5em;
+background: #DCC7AA;
+width: 100%;
+height: 100vh;
+
+}
+
+
+html {
+-webkit-text-size-adjust:  100%;
+-webkit-tap-highlight-color : transparent;
+font-family: sans-serif;
+line-height: 1.15;
+display: block;
+}
+
+
+
+
+.info {
+    /*float: right;*/
+    margin: 0px 10px 10px 10px;
+    background-color: white;
+    font-size: 0.7em;
+    padding: 7px 9px;
+    border-radius: 20px;
+    color: black;
+    text-decoration-line: none;
+    transition: background .4s ease-in-out;
+    height: 33px;
+    position: sticky;
+    border-bottom: 1px solid #00acee ;
+   border-top: 1px solid #9e363a;
+   border-right: 1px solid rgb(250, 126,30) ;
+} 
+
+
+
+.info:hover {
+    background-color: #9e363a ;
+    color: white;
+}
+
+
+#header {
+    width: 100%;
+    max-width: 100%;
+    height: 8vh;
+    background-color:  #0f2862;
+    position: sticky;
+    padding:10px  0px 10px 20px;
+}
+
+
+.img-holder {
+
+    width: 10%;
+
+}
+
+#convert-holder {
+    width: 45%;
+    height:50vh;
+    border-radius: 30px;
+    background-color: #f9f8fd;
+    margin: 10px auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #00acee ;
+   border-right: 1px solid #9e363a;
+   border-bottom: 1px solid rgb(250, 126,30) ;
+
+}
+
+
+
+.err404 {
+    font-size: 6em;
+    color: #0f2862;
+}
+
+.h3 {
+  font-size: 2rem;
+    color: #0f2862;  
+}
+
+#quote-holder {
+    width: 100%;
+    height:15%;
+    margin: 10px auto;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%
+
+}
+
+#Pdf2Word {
+width:80%
+border: 1px solid blue;
+background-color: #F0F0F0; 
+
+}
+
+
+
+input[type=file] {
+width: 350px;
+max-width: 100%;
+color: #444;
+padding: 10px;
+border-radius: 30px;
+border: 1px solid #555;
+
+}
+
+input[type=file]::file-selector-button {
+margin-right: 15px;
+border: none;
+background: #084cdf;
+padding: 10px 20px;
+border-radius: 10px;
+cursor: pointer;
+transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+background: #0d45a5;
+color: floralwhite;
+}
+
+input[type=submit]{
+    background-color:#9e363a;
+    width: 100%;
+    transition: background .2s ease-in-out;
+    color: floralwhite;
+}
+
+
+input[type=submit]:hover {
+    background-color:#0d45a5 ;
+    color: whitesmoke;
+}
+
+
+#submit {
+width:70%;
+max-width: 50%;
+height: 5vh;
+max-height:5vh;
+margin-top: 30px;
+border-radius: 25px;
+cursor: pointer;
+}
+
+
+section {
+
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px dashed #084cdf;
+    margin: 20px;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+section:hover {
+
+    background-color: #eee;
+    border-color: #E2495B;
+}
+
+/*.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height:100vh;
+    margin: 0px;
+    padding: 0px;
+
+}*/
+
+footer {
+
+background-color: #0f2862;
+width: 100%;
+height: 8vh;
+text-align: center;
+position: sticky;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-bottom: 0px;
+position: sticky;
+color: white;
+}
+
+
+
+#img1 {
+    width: 100%;
+    height: 8vh;
+    background-color: none;
+    padding-left: 20px;
+    /*background-color: inherit;*/
+    padding: 5px 5px;
+}
+
+.img-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+}
+
+#insta{
+    color: rgb(250, 126,30);
+    transition: background 0.2s ease-in-out;
+}
+
+#twit {
+    color: #00acee;
+    transition: background 0.2s ease-in-out;
+}
+
+#lnk {
+    color: #0072b1;
+}
+
+
+.fa-github {
+    color: white;
+}
+
+.word {
+      width: 30%;
+    height: 5vh;
+}
+
+.switch {
+    padding-top: 10px;
+}
+
+
+
+#desc {
+    color: #0f2862;
+}
+
+#rst{
+   text-decoration-line: none;
+   font-size: 0.5em;
+}
+
+
+#quote {
+    width: 50%;
+    height: 30%
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+#quotes {
+    font-size:1.3rem;
+    font-style: string;
+}
+
+#author {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 25%;
+    height: 25%;
+    padding-left: 20px;
+    color: red;
+
+}
+    
+
+#deg {
+   color: snow;
+   width: 100px;
+   height: 100%;
+   padding-top: 3px;
+   border-radius: 10px;
+   opacity: 1;
+   font-size: 0.7em;
+    border-left: 2px solid rgb(250, 126,30) ;
+    border-top: 1px solid #00acee ;
+    border-bottom: 1px solid #9e363a;
+    background-color: black;
+    margin-right: 0px;
+    background-opacity: 10px;
+    transition: font-size .2s ease-in-out;
+}
+
+#deg:hover {
+    font-size:0.8em;
+}
+
+#location {
+   background-color: black;
+   width: 100px;
+   height: 100%;
+   color: white;
+   padding-left: 30px;
+   border-radius: 10px;
+   border-right: 1px solid rgb(250, 126,30) ;
+   opacity: 1;
+   font-size:0.9rem;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-right: 30%;
+   border-bottom: 1px solid #00acee ;
+   border-top: 1px solid #9e363a;
+   transition: font-size .2s ease;
+
+}
+
+#location:hover {
+    font-size:1.0rem;
+}
+
+
+
+
+.ctc-info {
+  /*  border: 1px solid blue;*/
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header {
+  /*border: 1px solid green;*/
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #0f2862;
+
+
+}
+
+.first {
+    height: 100%;
+    width: 25%;
+
+}
+
+
+.div_visits {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_visits > span {
+    font-size: 0.7rem;
+    margin-right: 30px;
+    opacity: 0.3;
+} 
