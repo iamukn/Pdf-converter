@@ -5,6 +5,7 @@ from Py_files.db import visitCount, counts
 from flask import Flask, render_template, request
 from mimetypes import guess_type
 import requests
+from time import ctime
 
 """instance of the Flask is created"""
 app = Flask(__name__)
@@ -21,7 +22,7 @@ if __name__ == '__main__':
 
         params = {
         "key":key,
-        "q": city
+        "q": "Lagos"
         }
         try:
             res = requests.get(url, params)
@@ -61,6 +62,9 @@ if __name__ == '__main__':
         if request.method == 'POST':
             pdf_file = request.files['Pdf2Word']
             verify = guess_type(pdf_file.filename)[0]
+            new_name = pdf_file.filename.split('.pdf')
+            rename = "{}.docx".format(new_name[0])
+
             if verify == "application/pdf":
                 return "Got it"
 
@@ -70,7 +74,7 @@ if __name__ == '__main__':
     @app.route('/docx', methods=['POST'])
     def docx_convert():
         if request.method == 'POST':
-            word_file = request.files['word']
+            word_file = request.files['Pdf2Word']
             verify = guess_type(word_file.filename)[0]
             if verify == "application/msword":
 
