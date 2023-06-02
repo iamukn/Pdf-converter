@@ -2,10 +2,11 @@
 
 """ Flask app to serve the converter """
 from Py_files.db import visitCount, counts
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from mimetypes import guess_type
 import requests
 from time import ctime
+from Py_files.pdfToDocx import pwConverter
 
 """instance of the Flask is created"""
 app = Flask(__name__)
@@ -35,7 +36,7 @@ if __name__ == '__main__':
 
 
 
-    """ handles the get request from the '/' directory"""
+    """ handles the get request from the '/' route"""
     @app.errorhandler(404)
     def not_found(e):
         return render_template("404.html", deg=temp, location=state)
@@ -49,27 +50,40 @@ if __name__ == '__main__':
         converts = counter["Total_converts"]
 
         return render_template("index.html", deg=temp, location=state, visits=traffic, convert=converts)
-
+    """ Handles the get request from the '/docx' route"""
     @app.route('/docx', methods=["GET"])
     def docx():
-        
-        return render_template("docx.html", deg=temp, location=state)
+        counter = counts()
+        traffic = counter["Site_traffic"]
+        converts = counter["Total_converts"]
+        return render_template("docx.html", deg=temp, location=state, visits=traffic, convert=converts)
+
+
+    """ Handles the get request from the '/docx' route"""
+    @app.route('/about', methods=["GET"])
+    def about():
+        counter = counts()
+        traffic = counter["Site_traffic"]
+        converts = counter["Total_converts"]
+        return render_template("about.html", deg=temp, location=state, visits=traffic, convert=converts)
 
     """ handles the post request from the pdf recieved"""
 
     @app.route('/pdf2word', methods=['POST'])
     def convert():
         if request.method == 'POST':
-            pdf_file = request.files['Pdf2Word']
+            pdf_file = request.files['pdf_file']
+            pdf_file.save("pdf_file.pdf")
             verify = guess_type(pdf_file.filename)[0]
             new_name = pdf_file.filename.split('.pdf')
             rename = "{}.docx".format(new_name[0])
 
             if verify == "application/pdf":
-                return "Got it"
+
+                return pwConverter("pdf_file.pdf", rename)
 
             else:
-                return render_template("pdf2doc.html", deg=temp, pdf='file not a word document', location=state)
+                return render_template("pdf2doc.html", deg=temp, pdf='file not a pdf document', location=state)
 
     @app.route('/docx', methods=['POST'])
     def docx_convert():

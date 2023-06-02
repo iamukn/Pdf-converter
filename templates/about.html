@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pdf2Word converter</title>
+		<link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
+		<script src="https://kit.fontawesome.com/31f14ce31a.js" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+		<meta name="description" content="Pdf to Word Converter">
+		<meta name="author" content="Ndukwe, Ukaegbu">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/static/script/main.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<div class="img-holder">
+				<a href="/"><img src="/static/svg/pdf2.svg" id="img1" alt="pdf_logo"></img></a>
+			</div>
+			<div class="ctc-info">
+				<a href="/donate" class="info donate" type="button">Donate</a>
+				<a href="/about" class="info about">About Us </a>
+				<a href="/" class="info home">Home</a>
+		    </div>
+		</header>
+	    <center id = 'quote-holder'>
+	    	<div class="first"></div>
+	    	<div id="quote">
+	    	    <q id="quotes"></q>
+	    	    <p id="author"></p>
+	        </div>
+	        <div id="temp">
+	            <span id='place'>{{location}}</span>
+	            <span id="place_temp">{{deg}}</span>
+	         </div>
+	        </center>
+			<section id="about">
+				<p>
+					Welcome to our PDF to Word Converter WebApp! We are dedicated to providing you with a simple and efficient solution for converting your PDF documents into editable Word files. Our team has developed a user-friendly platform that allows you to effortlessly transform your PDFs into fully editable Word documents, saving you time and effort.
+				</p>
+				<br>
+				<p>
+					At our WebApp, we understand the importance of maintaining the formatting and layout of your documents during the conversion process. Our advanced technology ensures that your converted Word files closely resemble the original PDF, retaining fonts, images, tables, and other elements. Whether you need to edit, modify, or repurpose your PDF content, our converter is here to assist you.
+				</p>
+				<br>
+				<p>
+					We take pride in offering a seamless experience to our users. Our WebApp is designed to be intuitive and easy to navigate, enabling both beginners and experienced users to convert their files with ease. Simply upload your PDF, click the conversion button, and download your Word file within seconds. 
+				</p>
+				<br>
+				<p>
+					We are constantly striving to improve our services and add new features to enhance your experience. Your feedback and suggestions are invaluable to us, and we welcome any comments or ideas you may have. Our dedicated support team is also available to assist you with any issues or questions you may encounter while using our WebApp.
+				</p>
+				<br>
+				<p>
+					Thank you for choosing our PDF to Word Converter WebApp. We hope it simplifies your document editing and enhances your productivity. Start converting your PDFs to Word today!
+				</p>
+			</section>
+		    <div class="div_visits">
+		    	<span>visitors : {{visits}}</span>
+		    	<span>files converted : {{convert}}</span>
+		    </div>
+		<footer>
+			<div class="foot">
+				<a href="https://www.instagram.com/iam_ukn" target="_blank" id='insta'><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://github.com/iamukn"><i class="fa-brands fa-github fa-beat"></i></a>
+				<a href="https://twitter.com/iam_ukn" target="_blank" id='twit'><i class="fa-brands fa-twitter"></i></a>
+		    </div>
+	   </footer>
+	</body>
+</html>
