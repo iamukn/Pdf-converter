@@ -81,8 +81,11 @@ if __name__ == '__main__':
             rename = "{}.docx".format(new_name[0])
 
             if verify == "application/pdf":
-
+                """ handles the conversion to docx from pdf"""
                 pwConverter(file_name, rename)
+                """ Handles the convert count increments """
+                visitCount('converts')
+
                 return send_file(rename)
 
             else:

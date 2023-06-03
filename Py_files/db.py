@@ -73,7 +73,7 @@ def visitCount(x="visits"):
 def counts():
     try:
         data = session.query(visits)
-        """iterate through to increment the file convert data from the table"""
+        """iterate through the file convert data from the table"""
 
         for i in data:
             res = {
