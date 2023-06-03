@@ -7,6 +7,7 @@ from mimetypes import guess_type
 import requests
 from time import ctime
 from Py_files.pdfToDocx import pwConverter
+from werkzeug.utils import secure_filename
 
 """instance of the Flask is created"""
 app = Flask(__name__)
@@ -73,17 +74,19 @@ if __name__ == '__main__':
     def convert():
         if request.method == 'POST':
             pdf_file = request.files['pdf_file']
-            pdf_file.save("pdf_file.pdf")
-            verify = guess_type(pdf_file.filename)[0]
-            new_name = pdf_file.filename.split('.pdf')
+            pdf_file.save(secure_filename(pdf_file.filename))
+            verify = guess_type(secure_filename(pdf_file.filename))[0]
+            file_name = secure_filename(pdf_file.filename)
+            new_name = secure_filename(pdf_file.filename).split('.pdf')
             rename = "{}.docx".format(new_name[0])
 
             if verify == "application/pdf":
 
-                return pwConverter("pdf_file.pdf", rename)
+                pwConverter(file_name, rename)
+                return send_file(rename)
 
             else:
-                return render_template("pdf2doc.html", deg=temp, pdf='file not a pdf document', location=state)
+                return render_template("pdf2doc.html", deg=temp, pdf="upload a valid pdf", location=state)
 
     @app.route('/docx', methods=['POST'])
     def docx_convert():

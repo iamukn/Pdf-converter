@@ -10,4 +10,4 @@ def pwConverter(pdfFile, docxName):
         File converted
     """
     parse(pdfFile,docxName)
-    return send_file(docxName, as_attachment=True)
+    return
