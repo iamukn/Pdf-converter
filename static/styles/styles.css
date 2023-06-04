@@ -454,3 +454,27 @@ font-size: 0.95rem;
 padding: 0 5px;
 border-radius: 5px;
 }
+
+/* donate page */
+#donate {
+width:80%;
+margin:auto auto;
+padding:20px 50px 50px 50px;
+background-color:inherit;
+display:inline-block;
+font-size:1rem;
+line-height:1.3;
+border: 1px solid black;
+height:60%;
+font-weight:400;
+cursor: auto;
+border: 1px dotted rgb(250, 126,30);
+border-left: 1px solid #0f2862;
+border-right: 1px solid #00acee;
+}
+section#donate > p,li {
+background-color: rgba(128, 128, 128, 0.3);
+font-size: 1.0rem;
+padding: 0 5px;
+border-radius: 5px;
+}
