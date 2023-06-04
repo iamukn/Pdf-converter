@@ -68,6 +68,14 @@ if __name__ == '__main__':
         converts = counter["Total_converts"]
         return render_template("about.html", deg=temp, location=state, visits=traffic, convert=converts)
 
+    """ Handles the get request from the '/about' route"""
+    @app.route('/donate', methods=["GET"])
+    def donate():
+        counter = counts()
+        traffic = counter["Site_traffic"]
+        converts = counter["Total_converts"]
+        return render_template("donate.html", deg=temp, location=state, visits=traffic, convert=converts)
+
     """ handles the post request from the pdf recieved"""
 
     @app.route('/pdf2word', methods=['POST'])
@@ -82,10 +90,10 @@ if __name__ == '__main__':
 
             if verify == "application/pdf":
                 """ handles the conversion to docx from pdf"""
+
                 pwConverter(file_name, rename)
                 """ Handles the convert count increments """
                 visitCount('converts')
-
                 return send_file(rename)
 
             else:

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pdf2Word converter</title>
+		<link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
+		<script src="https://kit.fontawesome.com/31f14ce31a.js" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+		<meta name="description" content="Pdf to Word Converter">
+		<meta name="author" content="Ndukwe, Ukaegbu">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/static/script/main.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<div class="img-holder">
+				<a href="/"><img src="/static/svg/pdf2.svg" id="img1" alt="pdf_logo"></img></a>
+			</div>
+			<div class="ctc-info">
+				<a href="/donate" class="info donate" type="button">Donate</a>
+				<a href="/about" class="info about">About Us </a>
+				<a href="/" class="info home">Home</a>
+		    </div>
+		</header>
+	    <center id = 'quote-holder'>
+	    	<div class="first"></div>
+	    	<div id="quote">
+	    	    <q id="quotes"></q>
+	    	    <p id="author"></p>
+	        </div>
+	        <div id="temp">
+	            <span id='place'>{{location}}</span>
+	            <span id="place_temp">{{deg}}</span>
+	         </div>
+	        </center>
+			<section id="donate">
+								<p>
+					Your donation will help us continue to develop and improve our pdf2word converter webapp. We are committed to providing a free and easy-to-use tool that helps people convert their PDF files to Word documents. Your donation will help us cover the costs of development, hosting, and maintenance. It will also help us add new features and improve the user experience.
+				</p>
+				<br>
+				<p>
+					We believe that everyone should have access to affordable and easy-to-use tools that help them with their work and studies. Your donation will help us make our pdf2word converter webapp even better and reach more people.
+
+Thank you for your support!
+<br>
+<br>
+<b>Here are some of the ways your donation will be used:</b>
+				</p>
+				<br>
+				<p>
+					<ul>
+						<li>
+							Development of new features: We are constantly working on new features to make our pdf2word converter webapp even more powerful and user-friendly. Your donation will help us fund the development of these new features.
+						</li>
+						<li>
+							Hosting and maintenance: The cost of hosting and maintaining our website is not insignificant. Your donation will help us cover these costs and ensure that our webapp is always available to our users.
+						</li>
+						<li>
+							Outreach and marketing: We want to reach as many people as possible with our pdf2word converter webapp. Your donation will help us fund our outreach and marketing efforts.
+						</li>
+					</ul>
+				</p>
+				<br>
+				<p>
+				If you would like to make a donation, you can do so by contacting us at <a target=_blank href=mailto:doc2pdfconverter@gmail.com>doc2pdfconverter@gmail.com</a>, you can also contact us via email with any questions or feedback.
+
+Thank you again for your support!
+				</p>
+				<br>
+			</section>
+		    <div class="div_visits">
+		    	<span>visitors : {{visits}}</span>
+		    	<span>files converted : {{convert}}</span>
+		    </div>
+		<footer>
+			<div class="foot">
+				<a href="https://www.instagram.com/iam_ukn" target="_blank" id='insta'><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://github.com/iamukn"><i class="fa-brands fa-github fa-beat"></i></a>
+				<a href="https://twitter.com/iam_ukn" target="_blank" id='twit'><i class="fa-brands fa-twitter"></i></a>
+		    </div>
+	   </footer>
+	</body>
+</html>
