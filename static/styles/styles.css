@@ -478,3 +478,168 @@ font-size: 1.0rem;
 padding: 0 5px;
 border-radius: 5px;
 }
+
+
+/* Landing and Query */
+
+#landing {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://blog.lulu.com/wp-content/uploads/2020/02/021920_WordtoPDF-Blog.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#landing > div > h1 {
+
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+    font-family: fantasy;
+}
+
+
+#landing > div > p {
+
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 100;
+    font-family: serif;
+    color:maroon;
+
+}
+
+#Try {
+
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+#Try > a {
+
+    text-decoration: none;
+    font-family: fantasy;
+    background-color:grey;
+    color: white;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+#Try > a:hover {
+background:brown;
+}
+/* Media */
+
+@media (max-width: 899px) {
+
+    section {
+        width: 97%;
+    }
+}
+
+@media (max-width:816px) {
+
+section {
+    height: 35vh;
+    max-width: 80%;
+}
+ input[type=file] {
+
+    width: 80%;
+ }
+
+ input[type=file]::file-selector-button {
+   display: none;
+
+ }
+
+ input {
+
+    height: 30px;
+ }
+
+ #submit {
+
+    width: 50%;
+    height: 80px;
+ }
+
+ div.div_visits > span {
+    font-size: 0.7rem;
+ }
+
+img.word {
+
+    width: 20px;
+    height: 20px;
+}
+
+}
+
+
+@media (max-width:549px) {
+
+section {
+    height: 35vh;
+    max-width: 100%;
+}
+ input[type=file] {
+
+    width: 80%;
+ }
+
+ input[type=file]::file-selector-button {
+   display: none;
+
+ }
+
+ input {
+
+    height: 30px;
+ }
+
+#deg,#location {
+    display: none;
+}
+
+ span#desc {
+    font-size: 1.2rem;
+ }
+ #submit {
+
+    width: 50%;
+    height: 80px;
+ }
+
+ div.div_visits > span {
+    font-size: 0.7rem;
+ }
+
+img.word {
+
+    width: 20px;
+    height: 20px;
+}
+
+}
+
+@media (max-width:454px) {
+
+#convert-holder {
+    width: 60%;
+}
+
+section {
+    height: 35vh;
+    max-width: 100%;
+}
+  
+}
+
