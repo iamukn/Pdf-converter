@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import subprocess
+import aspose.words as word
 
 """ Converts docx files to pdf using the subprocess \
 library which runs its command on the command line"""
@@ -12,4 +12,6 @@ def docxToPdf(docx_path, pdf_path):
     Return:
         Returns 0
     """
-    subprocess.call(["unoconv", '-f', 'pdf', '-o', pdf_path, docx_path])
+    doc = word.Document(docx_path)
+    doc.save(pdf_path)
+    return

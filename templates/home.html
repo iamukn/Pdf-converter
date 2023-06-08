@@ -9,10 +9,10 @@
 		<meta name="author" content="Ndukwe, Ukaegbu">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="/static/script/main.js"></script>
+		<script type="text/javascript" src="../static/script/main.js"></script>
 
 	</head>
-	<body>
+	<body id="body">
 		<header>
 			<div class="img-holder">
 				<a href="/"><img src="/static/svg/pdf2.svg" id="img1" alt="pdf_logo"></img></a>
@@ -30,25 +30,21 @@
 	    	    <p id="author"></p>
 	        </div>
 	        <div id="temp">
-	            <span id='place'>{{location}}</span>
-	            <span id="place_temp">{{deg}}</span>
 	         </div>
 	        </center>
-			<section id="about">
-				<p>
-					Welcome to our PDF to Word Converter WebApp! We are dedicated to providing you with a simple and efficient solution for converting your PDF documents into editable Word files. Our team has developed a user-friendly platform that allows you to effortlessly transform your PDFs into fully editable Word documents, saving you time and effort.
-				</p>
-				<br>
-				<p>
-					At our WebApp, we understand the importance of maintaining the formatting and layout of your documents during the conversion process. Our advanced technology ensures that your converted Word files closely resemble the original PDF, retaining fonts, images, tables, and other elements. Whether you need to edit, modify, or repurpose your PDF content, our converter is here to assist you.
-				</p>
-				<br>
-				<p>
-			</section>
-		    <div class="div_visits">
-		    	<span>visitors : {{visits}}</span>
-		    	<span>files converted : {{convert}}</span>
-		    </div>
+	    	 	<div id="landing">
+	    	 		<div>
+	    	 			<h1>
+	    	 				Convert PDFs to DOCXs with ease
+	    	 			</h1>
+	    	 			<p>
+	    	 				Our Converter is perfect for students, professionals, and anyone else who needs to convert PDFs to DOCX. It's fast, easy to use, and completely free.
+	    	 			</p>
+	    	 		</div>
+	    	 		<div id="Try">
+	    	 			<a href="/pdf">Try for free</a>
+	    	 		</div>
+				</div>
 		<footer>
 			<div class="foot">
 				<a href="https://www.instagram.com/iam_ukn" target="_blank" id='insta'><i class="fa-brands fa-instagram"></i></a>
