@@ -124,4 +124,4 @@ def docx_convert():
             return render_template('doc2pdf.html',pdf='Please upload a valid docx', download='#', deg=temp, location=state)
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5000, host='0.0.0.0')	
+    app.run(debug=True, port=2500, host='0.0.0.0')	

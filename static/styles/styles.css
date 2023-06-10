@@ -536,6 +536,11 @@ border-radius: 5px;
 background:brown;
 }
 /* Media */
+@media (max-width: 912px) {
+#deg, #location {
+height : 80%;
+}
+}
 
 @media (max-width: 899px) {
 
@@ -566,7 +571,7 @@ section {
 
  input {
 
-    height: 30px;
+    height: 35px;
  }
 
  #submit {
@@ -606,7 +611,7 @@ section {
 
  input {
 
-    height: 30px;
+    height: 35px;
  }
 
 #deg,#location {
@@ -647,6 +652,30 @@ section {
     height: 35vh;
     max-width: 100%;
 }
-  
+ 
+input {
+height : 40px;
+}
+}
+@media (max-width: 380px) {
+    #quotes {
+    font-size : 0.9rem; 
+    }
+
+    #author {
+    
+    font-size: 0.5rem;
+    }
 }
 
+@media (max-width : 280px) {
+.info {
+font-size : 0.7rem;
+height : 25px;
+padding-bottom:15px;
+}
+input#Pdf2Word {
+width: 150px;
+height : 2%;
+}
+}
