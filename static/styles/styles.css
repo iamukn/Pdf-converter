@@ -548,6 +548,12 @@ height : 80%;
         width: 97%;
     }
 
+.err404 {
+font-size:3rem;
+}
+.h3 {
+font-size:1rem;
+}
 #landing > div > p {
 padding:0px 10px;
 }
@@ -592,9 +598,18 @@ img.word {
 
 }
 
+@media (max-width:586px) {
+#about, #donate {
+    width:90%;
+    font-size:0.6rem;
+}
+}
 
 @media (max-width:549px) {
 
+#about {
+width:90%;
+}
 section {
     height: 35vh;
     max-width: 100%;
@@ -639,6 +654,16 @@ img.word {
 
 }
 
+@media (max-width:480px) {
+#about, #donate {
+width:99%;
+}
+#about > p, #donate > p {
+width:100%;
+font-size: 0.2rem;
+}
+}
+
 @media (max-width:454px) {
 
 #convert-holder {
@@ -657,6 +682,13 @@ input {
 height : 40px;
 }
 }
+
+@media (max-width:422px) {
+
+#about > p, #donate > p {
+font-size : 0.1rem;
+}
+}
 @media (max-width: 380px) {
     #quotes {
     font-size : 0.9rem; 
@@ -668,6 +700,15 @@ height : 40px;
     }
 }
 
+@media (max-width:375px) {
+#about, #donate {
+padding:0px 10px 0px 10px;
+}
+#about > p, #donate > p {
+margin:10px auto 0px auto;
+}
+}
+
 @media (max-width : 280px) {
 .info {
 font-size : 0.7rem;
@@ -677,5 +718,12 @@ padding-bottom:15px;
 input#Pdf2Word {
 width: 150px;
 height : 2%;
+}
+#about > p:nth-child(3), #about > p:nth-child(1){
+font-size:1.1em;
+}
+
+#quotes {
+font-size:11px;
 }
 }
