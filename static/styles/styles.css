@@ -495,7 +495,8 @@ border-radius: 5px;
     font-size: 2rem;
     text-align: center;
     margin-top: 30px;
-    font-family: fantasy;
+    font-family: "Sofia", sans-serif;
+    color: maroon;
 }
 
 
@@ -505,8 +506,7 @@ border-radius: 5px;
     text-align: center;
     margin-top: 30px;
     font-weight: 100;
-    font-family: serif;
-    color:maroon;
+    font-family: 'Alegreya', serif;
 
 }
 
@@ -525,7 +525,7 @@ border-radius: 5px;
 #Try > a {
 
     text-decoration: none;
-    font-family: fantasy;
+    font-family: 'Alegreya', serif;
     background-color:grey;
     color: white;
     padding: 1%;
@@ -542,6 +542,10 @@ background:brown;
     section {
         width: 97%;
     }
+
+#landing > div > p {
+padding:0px 10px;
+}
 }
 
 @media (max-width:816px) {
@@ -636,6 +640,9 @@ img.word {
     width: 60%;
 }
 
+#landing > div > p {
+font-size : 0.8rem;
+}
 section {
     height: 35vh;
     max-width: 100%;

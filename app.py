@@ -118,10 +118,10 @@ def docx_convert():
             file_name = secure_filename(word_file.filename)
             new_name = secure_filename(word_file.filename).split('.doc')
             rename = "{}.pdf".format(new_name[0])
-            docxToPdf(file_name, 'newfile.pdf')
-            return(send_file('newfile.pdf'))
+            docxToPdf(file_name, rename)
+            return(send_file(rename))
         else:
             return render_template('doc2pdf.html',pdf='Please upload a valid docx', download='#', deg=temp, location=state)
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5000, host='0.0.0.0')	
+    app.run(debug=False, port=2500, host='0.0.0.0')	

@@ -4,7 +4,8 @@ from pdf2docx import parse
 def pwConverter(pdfFile, docxName):
     """ Converts Pdf to Docx.
     Arg:
-        x:pdf file to be converted
+        pdfFile:pdf file to be converted
+        docxName: The name of the new docx file
         
     Returns:
         File converted
