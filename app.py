@@ -119,6 +119,7 @@ def docx_convert():
             new_name = secure_filename(word_file.filename).split('.doc')
             rename = "{}.pdf".format(new_name[0])
             docxToPdf(file_name, rename)
+            visitCount('converts')
             return(send_file(rename))
         else:
             return render_template('doc2pdf.html',pdf='Please upload a valid docx', download='#', deg=temp, location=state)
