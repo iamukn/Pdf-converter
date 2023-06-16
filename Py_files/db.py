@@ -32,7 +32,7 @@ Base = declarative_base()
 class visits(Base):
 
     __tablename__ = "visits"
-
+    # creates Id, site_visit and file_converts column
     id = Column(Integer, primary_key=True)
     site_visit = Column(Integer)
     file_converts = Column(Integer)
@@ -76,10 +76,12 @@ def counts():
         """iterate through the file convert data from the table"""
 
         for i in data:
+            # creates an object using the queried data
             res = {
                 'Site_traffic': i.site_visit,
                 'Total_converts': i.file_converts
                 }
             return res
     except Exception:
+        # Returns an error if the try block fails
         return "An increment error occured!!!"
