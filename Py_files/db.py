@@ -43,7 +43,7 @@ class visits(Base):
 # Base.metadata.create_all(engine)
 
 
-""" Queries the database and updates the visit count """
+""" Queries the database & updates the visit count """
 
 
 def visitCount(x="visits"):
