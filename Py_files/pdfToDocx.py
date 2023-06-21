@@ -11,5 +11,6 @@ def pwConverter(pdfFile, docxName):
     Returns:
         File converted
     """
+    # handles the conversion
     parse(pdfFile, docxName)
     return
