@@ -11,7 +11,7 @@ def docxToPdf(docx_path, pdf_path):
         docx_path: Path to the MsWord file
         pdf_path: Path to save the Pdf file
     Return:
-        Returns 0
+        Return 0
     """
     doc = word.Document(docx_path)
     doc.save(pdf_path)
