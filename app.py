@@ -6,6 +6,7 @@ from mimetypes import guess_type
 from Py_files.db import visitCount, counts
 from Py_files.pdfToDocx import pwConverter
 from Py_files.msWord import docxToPdf
+from Py_files.temp import temp_data
 import requests
 from time import ctime
 from werkzeug.utils import secure_filename
@@ -17,37 +18,12 @@ app = Flask(__name__)
     The key is temporary and should be renewed
     to avoid code breaks
 """
-
-
-def weather():
-    # initialized variables to hold the url, API key, and states
-    url = 'http://api.weatherapi.com/v1/current.json'
-    key = '002cde86c6ee48209de205033230806'
-    states = ["Lagos"]
-    city = states[0]
-    # created an object to hold the API key and state which will be passed as
-    # A query header the API
-    params = {
-        "key": key,
-        "q": "Lagos"
-        }
-    try:
-        # This makes a request to the Weather api url
-        # Checks for an error
-        res = requests.get(url, params)
-        body = res.json()
-        return body
-    except Exception:
-        # The except block handles all errors that may arise from the try block
-        return "An error occured!"
-
-
-# The state variable calls the weather method
-# Holds the location name of the given location
-state = weather()['location']['region']
-# The temp variable hold the temperature of the queried region
-temp = "{}°".format(weather()['current']['temp_c'])
-
+# Holds the JSON data from the temp_data method
+temperature = temp_data()
+# Fetches the state name from the data
+state = temperature['name']
+# Fetches the temperature of the state
+temp = temperature['main']['temp']
 """ handles the 404 not found route"""
 
 
@@ -64,6 +40,7 @@ def not_found(e):
 @app.route('/', methods=["GET"])
 # A method that serves the landing page
 def home():
+
     return render_template('home.html')
 
 
