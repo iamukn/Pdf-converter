@@ -1,6 +1,6 @@
 import requests
 
-""" Method to query the OpenWeatherAPI and return the temperature data"""
+""" Method to handle query to OpenWeatherAPI and return the temperature data"""
 
 
 def temp_data(location="Calabar"):
