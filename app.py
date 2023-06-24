@@ -164,9 +164,8 @@ def docx_convert():
         # Gets the file from the request with the key Pdf2Word
         word_file = request.files['Pdf2Word']
         # Checks to see if the file is a docx file
-        verify = guess_type(word_file.filename)[0]
-        if verify == "application/msword" or verify == "application/vnd.\
-                openxmlformats-officedocument.wordprocessingml.document":
+        verify = guess_type(secure_filename(word_file.filename))[0]
+        if verify == "application/msword" or verify == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
             # Saves the file to the server
             word_file.save(secure_filename(word_file.filename))
             # Gets the filename of the uploaded file
@@ -193,4 +192,4 @@ def docx_convert():
 # Checks if the file is called by its name
 if __name__ == "__main__":
     # Runs the app on port 5000
-    app.run(debug=False, port=5000, host='0.0.0.0')
+    app.run(debug=False, port=2000, host='0.0.0.0')
