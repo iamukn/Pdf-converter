@@ -192,4 +192,4 @@ def docx_convert():
 # Checks if the file is called by its name
 if __name__ == "__main__":
     # Runs the app on port 5000
-    app.run(debug=False, port=2000, host='0.0.0.0')
+    app.run(debug=False, port=5000, host='0.0.0.0')
